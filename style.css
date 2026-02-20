@@ -1,0 +1,138 @@
+/*!* BACKGROUND IMAGE & LIGHT THEME *!*/
+/*.stApp {*/
+/*    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),*/
+/*    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");*/
+/*    background-size: cover;*/
+/*    background-attachment: fixed;*/
+/*}*/
+
+/*!* NAVIGATION LOGO *!*/
+/*.nav-logo {*/
+/*    font-size: 40px;*/
+/*    font-weight: 800;*/
+/*    color: #e11d48;*/
+/*    letter-spacing: -1px;*/
+/*    display: block;*/
+/*    text-align: center;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*!* BUTTONS *!*/
+/*.stButton > button {*/
+/*    background-color: #ffffff;*/
+/*    color: #1e293b;*/
+/*    border: 1px solid #e2e8f0;*/
+/*    border-radius: 8px;*/
+/*    transition: all 0.3s ease;*/
+/*    font-weight: 600;*/
+/*}*/
+
+/*.stButton > button:hover {*/
+/*    background-color: #e11d48;*/
+/*    color: white;*/
+/*    border-color: #e11d48;*/
+/*    transform: translateY(-2px);*/
+/*}*/
+
+/*!* MOVIE CARDS *!*/
+/*.movie-card {*/
+/*    background: white;*/
+/*    padding: 20px;*/
+/*    border-radius: 12px;*/
+/*    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 10px;*/
+/*    border-left: 5px solid #e11d48;*/
+/*}*/
+
+/*!* FOOTER *!*/
+/*.footer {*/
+/*    position: fixed;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    background-color: white;*/
+/*    color: #64748b;*/
+/*    text-align: center;*/
+/*    padding: 10px;*/
+/*    font-size: 12px;*/
+/*    border-top: 1px solid #e2e8f0;*/
+/*}*/
+
+
+
+/* BACKGROUND IMAGE & LIGHT THEME */
+.stApp {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1500&q=80");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* NAVIGATION LOGO */
+.nav-logo {
+    font-size: 45px;
+    font-weight: 800;
+    color: #e11d48;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+/* YOUTUBE BUTTON STYLE */
+.yt-button {
+    display: block;
+    text-align: center;
+    background-color: #ffffff;
+    color: #131313 !important;
+    text-decoration: none;
+    padding: 8px 0px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+
+}
+
+.yt-button:hover {
+    /*background-color: #f10a0a;*/
+    /*transform: scale(1.02);*/
+     background-color: #e11d48;
+    color: white;
+    border-color: #e11d48;
+    transform: translateY(-2px)
+}
+
+
+/* GENERAL BUTTONS */
+.stButton > button {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    background-color: #e11d48;
+    color: white;
+    border-color: #e11d48;
+    transform: translateY(-2px)
+}
+
+.stButton > button:hover {
+    border-color: #e11d48;
+    color: #e11d48;
+}
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e7e1e1;
+    color: #2a313a;
+    text-align: center;
+    padding: 4px;
+    border-top: 1.5px solid #e2e8f0;
+}
+
+
