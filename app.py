@@ -146,7 +146,12 @@ elif st.session_state.current_page == "Movies":
 # ---------------- RECOMMENDED PAGE ----------------
 elif st.session_state.current_page == "Recommended":
     if not st.session_state.selected_movie:
-        st.warning("Go to Home and search for a movie first!")
+    st.markdown(
+        "<p style='color: #e11d48; font-weight: 600;'>Go to Home and search for a movie first!</p>",
+        unsafe_allow_html=True
+    )
+    # if not st.session_state.selected_movie:
+    #     st.warning("Go to Home and search for a movie first!")
     else:
         st.markdown(
             f"<h2 style='color: #e11d48;'>Recommendations based on {st.session_state.selected_movie}</h2>",
