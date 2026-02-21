@@ -15,6 +15,13 @@
     margin-bottom: 20px;
 
 }
+/* PAGE HEADERS */
+.page-header {
+    color: #e11d48;       /* Change to your desired color */
+    text-align: center;   /* Center the text */
+    font-weight: 700;     /* Bold */
+    margin-bottom: 20px;  /* Space below header */
+}
 
 /* YOUTUBE BUTTON STYLE */
 .yt-button {
