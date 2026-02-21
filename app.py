@@ -277,18 +277,22 @@ import urllib.parse
 
 
 import os
-import gdown
-import streamlit as st
-import pandas as pd
+import requests
 import pickle
-import urllib.parse
 
-FILE_ID = "YOUR_GOOGLE_DRIVE_FILE_ID"
 FILE_NAME = "similarity.pkl"
 
+# OneDrive direct download URL
+ONEDRIVE_URL = "https://1drv.ms/u/c/e7d158c771329572/IQA6dW5wGS8_ToaL5HBX8gnrAeB5yMtrTreF29N9ukHXaRk?e=jxgxpC"
+
+# Download file if not exists
 if not os.path.exists(FILE_NAME):
-    url = f"https://drive.google.com/uc?id={FILE_ID}"
-    gdown.download(url, FILE_NAME, quiet=False)
+    with requests.get(ONEDRIVE_URL, stream=True) as r:
+        r.raise_for_status()
+        with open(FILE_NAME, "wb") as f:
+            for chunk in r.iter_content(chunk_size=8192):
+                f.write(chunk)
+    print(f"{FILE_NAME} downloaded successfully!")
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -297,7 +301,9 @@ st.set_page_config(
     layout="wide"
 )
 
-
+# Now you can load similarity.pkl
+with open(FILE_NAME, 'rb') as f:
+    similarity = pickle.load(f)
 # ---------------- LOAD CSS ----------------
 def load_css():
     try:
