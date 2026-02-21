@@ -86,5 +86,15 @@
     color: #e11d48 !important;  /* red text */
     font-weight: 600 !important; /* bold text */
 }
+/* Change the placeholder text color and input text color for Streamlit text_input */
+.css-1d391kg input::placeholder {
+    color: #e11d48 !important;  /* red placeholder text */
+    font-weight: 600 !important;
+}
+
+.css-1d391kg input {
+    color: #1e293b !important;   /* typed text color */
+    font-weight: 600 !important;
+}
 
 
