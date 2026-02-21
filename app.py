@@ -274,6 +274,22 @@ import pandas as pd
 import pickle
 import urllib.parse
 
+
+
+import os
+import gdown
+import streamlit as st
+import pandas as pd
+import pickle
+import urllib.parse
+
+FILE_ID = "YOUR_GOOGLE_DRIVE_FILE_ID"
+FILE_NAME = "similarity.pkl"
+
+if not os.path.exists(FILE_NAME):
+    url = f"https://drive.google.com/uc?id={FILE_ID}"
+    gdown.download(url, FILE_NAME, quiet=False)
+
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
     page_title="MovieFlix | Your Personal Cinema",
