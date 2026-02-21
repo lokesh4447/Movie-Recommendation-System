@@ -81,5 +81,10 @@
     padding: 4px;
     border-top: 1.5px solid #e2e8f0;
 }
+/* Change the text color of Streamlit warning messages */
+.stAlert p {
+    color: #e11d48 !important;  /* red text */
+    font-weight: 600 !important; /* bold text */
+}
 
 
