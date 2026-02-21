@@ -17,10 +17,10 @@
 }
 /* PAGE HEADERS */
 .page-header {
-    color: #e11d48;       /* Change to your desired color */
-    text-align: center;   /* Center the text */
-    font-weight: 700;     /* Bold */
-    margin-bottom: 20px;  /* Space below header */
+    color: #e11d48 !important;       /* Header color */
+    text-align: center !important;   /* Center text */
+    font-weight: 700 !important;     /* Bold font */
+    margin-bottom: 20px !important; /* Space below */
 }
 
 /* YOUTUBE BUTTON STYLE */
