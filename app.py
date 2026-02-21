@@ -419,7 +419,9 @@ elif st.session_state.current_page == "Recommended":
     if not st.session_state.selected_movie:
         st.warning("Go to Home and search for a movie first!")
     else:
-        st.header(f"Recommendations based on {st.session_state.selected_movie}")
+        st.markdown(
+            f"<h2 style='color: #e11d48;'>Recommendations based on {st.session_state.selected_movie}</h2>",
+            unsafe_allow_html=True)
         recs = recommend(st.session_state.selected_movie)
 
         for idx, r in enumerate(recs):
