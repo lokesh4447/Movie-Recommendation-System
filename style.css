@@ -95,6 +95,11 @@
     transition: 0.3s;
 
 }
+.rec-header {
+    color: #e11d48;  /* Or any color you want */
+    text-align: center;
+    font-weight: 700;
+}
 
 .yt-button:hover {
     /*background-color: #f10a0a;*/
