@@ -11,7 +11,7 @@ import pickle
 
 FILE_NAME = "similarity.pkl"
 
-# OneDrive direct download URL
+# image URL
 ONEDRIVE_URL = "https://1drv.ms/u/c/e7d158c771329572/IQA6dW5wGS8_ToaL5HBX8gnrAeB5yMtrTreF29N9ukHXaRk?e=jxgxpC"
 
 # Download file if not exists
@@ -44,7 +44,7 @@ def load_css():
 
 load_css()
 
-# ---------------- LOAD DATA ----------------
+#  LOAD DATA
 try:
     movies_dict = pickle.load(open("movie_dict.pkl", "rb"))
     movies = pd.DataFrame(movies_dict)
@@ -53,7 +53,7 @@ except Exception as e:
     st.error(f"Error loading data: {e}")
     st.stop()
 
-# ---------------- SESSION STATES ----------------
+# SESSION STATES 
 if "selected_movie" not in st.session_state:
     st.session_state.selected_movie = None
 if "recent_movies" not in st.session_state:
@@ -64,7 +64,7 @@ if "current_page" not in st.session_state:
     st.session_state.current_page = "Home"
 
 
-# ---------------- HELPER FUNCTIONS ----------------
+# HELPER FUNCTIONS 
 def recommend(movie):
     try:
         movie_index = movies[movies["title"] == movie].index[0]
@@ -85,7 +85,7 @@ def get_youtube_url(movie_title):
     return f"https://www.youtube.com/results?search_query={query}"
 
 
-# ---------------- NAVIGATION BAR ----------------
+# NAVIGATION BAR 
 st.markdown("""
     <div class="navbar">
         <span class="nav-logo">🎬 MOVIEFLIX</span>
@@ -112,7 +112,7 @@ with m4:
 
 st.markdown("---")
 
-# ---------------- HOME PAGE ----------------
+# HOME PAGE 
 if st.session_state.current_page == "Home":
     st.markdown("<h1 style='text-align: center; color: #1e293b;'>Find Your Next Favorite Movie</h1>",
                 unsafe_allow_html=True)
@@ -127,7 +127,7 @@ if st.session_state.current_page == "Home":
             st.session_state.current_page = "Recommended"
             st.rerun()
 
-# ---------------- MOVIES PAGE (BROWSE) ----------------
+# MOVIES PAGE  
 elif st.session_state.current_page == "Movies":
     st.markdown("<h2 class='page-header'>🎥 All Movies</h2>", unsafe_allow_html=True)
     search_query = st.text_input("Filter by name...", placeholder="Type here...")
@@ -143,7 +143,7 @@ elif st.session_state.current_page == "Movies":
                 st.session_state.current_page = "Recommended"
                 st.rerun()
 
-# ---------------- RECOMMENDED PAGE ----------------
+# RECOMMENDED PAGE
 elif st.session_state.current_page == "Recommended":
    
     if not st.session_state.selected_movie:
@@ -175,7 +175,7 @@ elif st.session_state.current_page == "Recommended":
                         st.session_state.my_list.append(r)
                         st.toast(f"Added {r}!")
 
-# ---------------- MY LIST PAGE ----------------
+#  MY LIST PAGE 
 elif st.session_state.current_page == "My List":
     st.markdown("<h2 class='page-header'>❤️ My List</h2>", unsafe_allow_html=True)
     if not st.session_state.my_list:
@@ -189,7 +189,7 @@ elif st.session_state.current_page == "My List":
                 st.session_state.my_list.remove(m)
                 st.rerun()
 
-# ---------------- FOOTER ----------------
+# FOOTER 
 st.markdown("<br><br><br>", unsafe_allow_html=True)
 st.markdown("""
     <div class="footer">
